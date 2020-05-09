@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora</title>
+	<style>
+		.calculadora {
+			background-color: black;
+			color: white;
+			width: 400px;
+
+		}
+	</style>
+</head>
+<body>
+
+	<div class="calculadora">
+		<p class ="pantalla">0</p>
+		<button class="boton">7</button>
+	</div>
+	
+	<script>
+		let buffer = "0";
+		let screen = document.querySelector(".pantalla");
+
+
+		document
+			.querySelector(".boton")
+			.addEventListener('click', function(event){
+				alert('hello');
+				buttonClick(event.target.innerText);
+			});
+
+		function buttonClick(value){
+			if (isNaN(parseInt(value))){
+				handleSymbol(value);
+			} else {
+				handleNumber(value);
+			}
+		}
+
+		function handleNumber(value){
+			if (buffer==="0"){
+				buffer = value;
+			} else {
+				buffer += value;
+			}
+
+			rerender();
+		}
+
+		function handleSymbol(value){
+
+		}
+
+		function rerender (){
+			screen.innerText = buffer;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.calculadora {
+	background-color: black;
+	color: white;
+	width: 400px;
+
+}
+
+.pantalla {
+	display: block;
+	padding: 20px 5px;
+	text-align: right;
+	font-size: 40px;
+}
+
+.botones {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+button {
+	width: 24.5%;
+	height: 100px;
+	background-color: #d8d9db;
+	border: none;
+	margin-top: 3px;
+	font-size: 40px;
+}
+
+button:active {
+	opacity: 0.5
+}
+
+.especial {
+	background: #df974c;
+	color: white;
+
+}
+
+.filaBotones {
+	display: flex;
+	justify-content: space-between;
+}
+
+.doble-boton {
+	width: 49.7%;
+}
+
+.triple-boton {
+	width: 74.8%;
+}
